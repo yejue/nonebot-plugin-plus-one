@@ -2,7 +2,9 @@ from nonebot.plugin import on_message
 from nonebot.rule import regex
 from nonebot.adapters import Event
 
-plus = on_message(rule=regex(""), priority=1, block=False)
+from .config import config
+
+plus = on_message(rule=regex(""), priority=config.plus_one_priority, block=False)
 msg_dict = {}
 
 
