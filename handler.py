@@ -1,8 +1,5 @@
-import re
-import time
-
 from nonebot.plugin import on_message
-from nonebot.rule import regex, Rule
+from nonebot.rule import regex
 from nonebot.adapters import Event, Message
 
 from .config import config
