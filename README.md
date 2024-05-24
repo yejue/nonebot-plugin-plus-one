@@ -1,7 +1,7 @@
 
 <h1 align="center">🐣🐤只是一个复读姬 ✨</h1>
 <p align="center">
-_✨ 只是一个复读姬：支持群聊白名单、文本复读、图片表情复读 ✨_
+_✨ 只是一个复读姬：支持群聊白名单、文本复读、图片表情复读、甚至是转发和分享的复读 ✨_
 </p>
 <p align="center">
   <a href="https://raw.githubusercontent.com/cscs181/QQ-Github-Bot/master/LICENSE">
@@ -45,6 +45,10 @@ git clone https://github.com/yejue/nonebot-plugin-plus-one.git
 [群2]: 表情
 [群2]: 表情
 [机器人]: 表情
+
+[群2]: 分享音乐
+[群2]: 分享音乐
+[机器人]: 分享音乐
 ```
 
 ## 配置
