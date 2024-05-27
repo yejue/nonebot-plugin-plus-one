@@ -1,16 +1,12 @@
 from nonebot.plugin import on_message
 from nonebot.rule import regex
-from nonebot.adapters import Event, Message
+from nonebot.adapters import Event, Message, Bot
+from nonebot_plugin_session import extract_session, SessionIdType
 
 from .config import config
 
 plus = on_message(rule=regex(""), priority=config.plus_one_priority, block=False)
 msg_dict = {}
-
-
-def get_group_id(string: str):
-    group_id = string.split("_")[-2]
-    return group_id
 
 
 def is_equal(msg1: Message, msg2: Message):
@@ -23,10 +19,11 @@ def is_equal(msg1: Message, msg2: Message):
 
 
 @plus.handle()
-async def plush_handler(event: Event):
+async def plush_handler(bot: Bot, event: Event):
     global msg_dict
 
-    group_id = get_group_id(event.get_session_id())
+    session = extract_session(bot, event)
+    group_id = session.get_id(SessionIdType.GROUP).split("_")[-1]
     if group_id not in config.plus_one_white_list:
         return
 

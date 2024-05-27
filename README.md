@@ -1,5 +1,5 @@
 
-<h1 align="center">🐣🐤只是一个复读姬 ✨</h1>
+<h1 align="center">🐣🐤一个仅有40行代码的复读姬 ✨</h1>
 <p align="center">
 _✨ 只是一个复读姬：支持群聊白名单、文本复读、图片表情复读、甚至是转发和分享的复读 ✨_
 </p>
@@ -56,7 +56,7 @@ git clone https://github.com/yejue/nonebot-plugin-plus-one.git
 # 匹配优先级
 PLUS_ONE_PRIORITY = 10
 
-# 群聊白名单，单个或多个示例，下面任选其一
+# 群聊或私聊白名单，单个或多个示例，下面任选其一，可填入群 QQ 号或个人 QQ 号
 PLUS_ONE_WHITE_LIST = ["10000000"]
 PLUS_ONE_WHITE_LIST = ["10000000", "1000000"]
 ```
