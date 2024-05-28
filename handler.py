@@ -4,7 +4,7 @@ from nonebot_plugin_session import extract_session, SessionIdType
 
 from .config import config
 
-plus = on_message(rule="", priority=config.plus_one_priority, block=False)
+plus = on_message(priority=config.plus_one_priority, block=False)
 msg_dict = {}
 
 
