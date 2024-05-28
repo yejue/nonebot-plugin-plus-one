@@ -1,11 +1,10 @@
 from nonebot.plugin import on_message
-from nonebot.rule import regex
 from nonebot.adapters import Event, Message, Bot
 from nonebot_plugin_session import extract_session, SessionIdType
 
 from .config import config
 
-plus = on_message(rule=regex(""), priority=config.plus_one_priority, block=False)
+plus = on_message(rule="", priority=config.plus_one_priority, block=False)
 msg_dict = {}
 
 
