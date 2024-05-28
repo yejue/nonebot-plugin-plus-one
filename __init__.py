@@ -1,13 +1,10 @@
-from nonebot.plugin import PluginMetadata
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 from nonebot import require
 
 require("nonebot_plugin_session")
-from nonebot_plugin_session import __plugin_meta__ as session_meta
 
 from .config import Config
 from .handler import plus
-
-session_supported_adapters = session_meta.supported_adapters if session_meta.supported_adapters else set()
 
 
 __plugin_meta__ = PluginMetadata(
@@ -18,5 +15,5 @@ __plugin_meta__ = PluginMetadata(
     config=Config,
     homepage="https://github.com/yejue/nonebot-plugin-plus-one",
     type="application",
-    supported_adapters=set() | session_supported_adapters
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_session")
 )
